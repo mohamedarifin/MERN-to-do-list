@@ -15,7 +15,7 @@ Route.post('/signup',async (req,res)=>{
         }
         if(!users){
 
-            await UserModel.create({ name , email , password });
+            const userdata =  await UserModel.create({ name , email , password });
 
             res.json({
                 msg : "Successfully SignIned"
